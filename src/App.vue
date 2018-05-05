@@ -4,9 +4,9 @@
     <loading :show="isLoading" position="absolute" text="加载中"></loading>
     <view-box ref="viewbox">
       <!--header slot-->
-      <div class="vux-demo-header-box" slot="header">
-        <x-header :left-options="leftOptions" :transition="headerTransition" :title="title" @on-click-title="scrollTop"></x-header>
-      </div>
+      <!--<div class="vux-demo-header-box" slot="header">-->
+        <!--<x-header :left-options="leftOptions" :transition="headerTransition" :title="title" @on-click-title="scrollTop"></x-header>-->
+      <!--</div>-->
       <!--default slot-->
       <router-view
       :transition="'vux-pop-' + (direction === 'forward' ? 'in' : 'out')"
@@ -15,15 +15,15 @@
       <tabbar class="vux-demo-tabbar" icon-class="vux-center" v-show="!isTabbarDemo" slot="bottom">
         <tabbar-item :link="{path:'/'}" :selected="route.path === '/'">
           <span class="demo-icon-22 vux-demo-tabbar-icon-home" slot="icon">&#xe637;</span>
-          <span slot="label">Home</span>
+          <span slot="label">{{navigationBar1}}</span>
         </tabbar-item>
-        <tabbar-item :link="{path:'/demo'}" :selected="isDemo" badge="9">
+        <tabbar-item :link="{path:'/demo'}" :selected="isDemo" :badge="badge">
           <span class="demo-icon-22" slot="icon">&#xe633;</span>
-          <span slot="label"><span v-if="componentName" class="vux-demo-tabbar-component">{{componentName}}</span><span v-else>Demos</span></span>
+          <span slot="label"><span v-if="componentName" class="vux-demo-tabbar-component">{{componentName}}</span><span v-else>{{navigationBar2}}</span></span>
         </tabbar-item>
-        <tabbar-item :link="{path:'/project/donate'}" :selected="route.path === '/project/donate'" show-dot>
+        <tabbar-item :link="{path:'/project/donate'}" :selected="route.path === '/project/donate'" :show-dot="showDot">
           <span class="demo-icon-22" slot="icon">&#xe630;</span>
-          <span slot="label">Donate</span>
+          <span slot="label">{{navigationBar3}}</span>
         </tabbar-item>
       </tabbar>
     </view-box>
@@ -45,8 +45,13 @@ export default {
     return {
       routerTransition: {
         forward: 'slideRL',
-        back: 'slideLR'
-      }
+        back: 'slideLR',
+        badge: "",
+        showDot: false
+      },
+      navigationBar1: "Home",
+      navigationBar2: "Demos",
+      navigationBar3: "Donate"
     }
   },
   methods: {
@@ -148,9 +153,9 @@ body {
   left: 0;
   top: 0;
 }
-.weui_tab_bd {
-  padding-top: 46px;
-}
+/*.weui_tab_bd {*/
+  /*padding-top: 46px;*/
+/*}*/
 
 /**
 * vue-router transition

@@ -18,7 +18,7 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    port: 8080,
+    port: 9727,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     //反向代理配置
