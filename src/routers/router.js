@@ -95,7 +95,7 @@ const router = new VueRouter({
     //路由映射map
     routes: [
 
-        // { path: rootPath, component: Home, meta: { scrollToTop: true }, name: 'home' },
+        { path: rootPath, component: AdReport, meta: { scrollToTop: true }, name: 'home' },
         // { path: rootPath + 'demo', component: Demo , name: 'demo'},
         // { path: rootPath + 'component/cell', component: Cell , name: 'cell'},
         // { path: rootPath + 'component/tab', component: Tab , name: 'tab'},
