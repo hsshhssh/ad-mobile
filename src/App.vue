@@ -49,9 +49,9 @@ export default {
         badge: "",
         showDot: false
       },
-      navigationBar1: "Home",
-      navigationBar2: "Demos",
-      navigationBar3: "Donate"
+      navigationBar1: "上报",
+      navigationBar2: "敬请期待",
+      navigationBar3: "敬请期待"
     }
   },
   methods: {
