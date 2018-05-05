@@ -85,7 +85,9 @@
         }
         testReportUrl(data).then(response => {
           if(response.status == 200) {
-            window.location.href = response.data.url
+            console.log("跳转地址：" + response.data.url)
+            window.open(response.data.url)
+//            window.location.href = response.data.url
           }
         })
       }
