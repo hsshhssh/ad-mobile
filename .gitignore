@@ -7,3 +7,4 @@ test/e2e/reports
 selenium-debug.log
 node_modules/
 .idea/
+node_modules.zip

@@ -13,15 +13,15 @@
       ></router-view>
       <!--bottom slot-->
       <tabbar class="vux-demo-tabbar" icon-class="vux-center" v-show="!isTabbarDemo" slot="bottom">
-        <tabbar-item :link="{path:'/'}" :selected="route.path === '/'">
+        <tabbar-item :link="{path:'/ad/report'}" :selected="route.path === '/'">
           <span class="demo-icon-22 vux-demo-tabbar-icon-home" slot="icon">&#xe637;</span>
           <span slot="label">{{navigationBar1}}</span>
         </tabbar-item>
-        <tabbar-item :link="{path:'/demo'}" :selected="isDemo" :badge="badge">
+        <tabbar-item :link="{path:'/ad/report'}" :selected="isDemo" :badge="badge">
           <span class="demo-icon-22" slot="icon">&#xe633;</span>
           <span slot="label"><span v-if="componentName" class="vux-demo-tabbar-component">{{componentName}}</span><span v-else>{{navigationBar2}}</span></span>
         </tabbar-item>
-        <tabbar-item :link="{path:'/project/donate'}" :selected="route.path === '/project/donate'" :show-dot="showDot">
+        <tabbar-item :link="{path:'/ad/report'}" :selected="route.path === '/project/donate'" :show-dot="showDot">
           <span class="demo-icon-22" slot="icon">&#xe630;</span>
           <span slot="label">{{navigationBar3}}</span>
         </tabbar-item>
